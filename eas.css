@@ -1,3 +1,18 @@
-body{
-    background-color: blue;
+body {
+    background-color: aqua;
+}
+
+div {
+    background-color: white;
+    flex: auto;
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    height:auto;
+}
+
+body * {
+    border: 2px solid red;
 }
