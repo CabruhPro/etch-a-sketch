@@ -1,18 +1,39 @@
+html{
+    height:100vh;
+    width:100vw;
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     background-color: aqua;
+    width:80%;
+    height:80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 div {
     background-color: white;
-    flex: auto;
+    min-width: 6.25%;
+}
+
+div:hover {
+    background-color: red;
+}
+
+button {
+    min-height: 10%;
+    margin:24px;
 }
 
 .grid {
     display: flex;
+    flex: 1 0 300px;
     flex-flow: row wrap;
-    height:auto;
-}
-
-body * {
-    border: 2px solid red;
+    aspect-ratio: 1/1;
 }
