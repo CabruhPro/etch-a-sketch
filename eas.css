@@ -16,7 +16,10 @@ body {
 }
 
 h1 {
-    margin:0;
+    margin:auto;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 div {
@@ -25,11 +28,11 @@ div {
 }
 
 button {
-    margin:24px;
+    margin-bottom:24px;
 }
 
-.title {
-    text-align: center;
+.header {
+    font-family: 'FreeMono';
 }
 
 .pixel {
@@ -41,16 +44,20 @@ button {
     flex-flow: row wrap-reverse;
     align-items: center;
     flex:auto;
+    gap:48px;
+    overflow: auto;
 }
 
 .menu {
     flex-direction: column;
-    justify-content: space-between;
-    margin-right: 2.5%;
+    justify-content: center;
+    margin-right: 0;
+    align-self: stretch;
+    gap: 5%;
 }
 
 .grid {
-    margin-left: 2.5%;
+    margin-left: 0;
     flex: 1 0 300px;
     min-width: 300px;
     max-width: 35%;
@@ -60,8 +67,6 @@ button {
 }
 
 .footer {
-    margin: 0;
     color: whitesmoke;
-    font-size: x-large;
     background-color: rgb(70,70,70);
 }
