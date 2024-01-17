@@ -1,23 +1,41 @@
-html{
-    height:100vh;
+html {
     width:100vw;
-    margin:0;
-    display:flex;
-    justify-content: center;
+    height:100vh;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
 body {
-    background-color: aqua;
-    width:80%;
-    height:80%;
-    display:flex;
+    background-color: rgb(160, 160, 160);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+h1 {
+    margin:auto;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-bottom:24px;
+}
+
+.header {
+    font-family: 'FreeMono';
+}
+
+.pixel {
     background-color: white;
     min-width: 6.25%;
 }
@@ -32,9 +50,33 @@ button {
     margin:24px; 
 }
 
+.content{
+    flex-flow: row wrap-reverse;
+    align-items: center;
+    flex:auto;
+    gap:48px;
+    overflow: auto;
+}
+
+.menu {
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0;
+    align-self: stretch;
+    gap: 5%;
+}
+
 .grid {
-    display: flex;
+    margin-left: 0;
     flex: 1 0 300px;
+    min-width: 300px;
+    max-width: 35%;
     flex-flow: row wrap;
     aspect-ratio: 1/1;
+    box-shadow: 5px 5px 5px rgb(70, 70, 70);
+}
+
+.footer {
+    color: whitesmoke;
+    background-color: rgb(70,70,70);
 }

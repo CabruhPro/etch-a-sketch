@@ -1,23 +1,31 @@
 let pixelcount=16;
-
 grid=document.querySelector(".grid");
+populateGrid();
 button=document.querySelector("button");
-button.addEventListener("click",()=>{
-    prompt("How manyn pixels? (Max 100)")
-});
 
-function populateGrid() {
-    for (i = 0; i < pixelcount**2; i++){
-        div = document.createElement("div");
-        div.addEventListener('mouseenter', function (e) {
-            if (e.buttons == 1) {
-                percent=100/pixelcount;
+function populateGrid (){
+    while (grid.firstChild) {
+        grid.removeChild(grid.lastChild);
+    }
+    for (i=0; i < pixelcount**2; i++){
+        percentage = 100/pixelcount + "%";
+        pixel = document.createElement("div");
+        pixel.className = "pixel";
+        pixel.style.minWidth = percentage;
+        pixel.addEventListener('mouseover', function(e){
+            if(e.buttons==1){
                 this.style.backgroundColor="red";
-                this.style.minWidth=percent;
             }
         });
-        grid.appendChild(div);
+        pixel.addEventListener('mousedown', function(e){ 
+            e.preventDefault();
+            this.style.backgroundColor="red";
+        });
+        grid.appendChild(pixel);
     }
 }
-populateGrid();
 
+button.addEventListener('click', () => {
+    pixelcount = prompt("How many pixels? (Max 100)")
+    populateGrid();
+});
