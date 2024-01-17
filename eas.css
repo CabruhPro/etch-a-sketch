@@ -28,7 +28,8 @@ div:hover {
 
 button {
     min-height: 10%;
-    margin:24px;
+    min-width: 10%;
+    margin:24px; 
 }
 
 .grid {
