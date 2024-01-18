@@ -7,6 +7,7 @@ html {
 }
 
 body {
+    font-family: 'Courier New', Courier, monospace;
     background-color: rgb(160, 160, 160);
     width: 100%;
     height: 100%;
@@ -16,10 +17,9 @@ body {
 }
 
 h1 {
-    margin:auto;
+    margin: 0;
+    padding: 16px 0;
     text-align: center;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 div {
@@ -28,16 +28,20 @@ div {
 }
 
 button {
-    margin-bottom:24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    padding: 1em;
+    font-size: 16px;
 }
 
 .header {
-    font-family: 'FreeMono';
+    margin-top: 0.5em;
+    font-size: 48px;
 }
 
 .pixel {
     background-color: white;
-    flex: auto;
+    min-width: 6.25%;
 }
 
 .content{
@@ -49,15 +53,27 @@ button {
 }
 
 .menu {
+    margin: 0 0 48px 0;
+    flex: 0 0 300px;
     flex-direction: column;
-    justify-content: center;
-    margin-right: 0;
     align-self: stretch;
-    gap: 5%;
+    gap: 10%;
+}
+
+.container {
+    align-items: center;
+    gap: 1em;
+    font-weight: bolder;
+}
+.value {
+    text-align: center;
+}
+#colorvalue {
+    font-size: larger;
 }
 
 .grid {
-    margin-left: 0;
+    margin: 0 0 32px 0;
     flex: 1 0 300px;
     min-width: 300px;
     max-width: 35%;
@@ -69,4 +85,16 @@ button {
 .footer {
     color: whitesmoke;
     background-color: rgb(70,70,70);
+}
+
+#draw {
+    background-color: orange;
+}
+
+#erase {
+    background-color: pink;
+}
+
+#clear {
+    background-color: blanchedalmond;
 }
