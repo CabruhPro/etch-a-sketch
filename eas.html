@@ -10,16 +10,16 @@
         <h1 class="bar header">JS Paint</h1>
         <div class="content">
             <div class="menu">
-                <button>Draw</button>
-                <button>Erase</button>
-                <button>Clear</button>
-                <div class="colorcontainer">
-                    Color Palette
+                <button id="draw">Draw</button>
+                <button id="erase">Erase</button>
+                <button id="clear">Clear</button>
+                <div class="container">
+                    <div id="colorvalue" class="value">Color: #000000</div>
                     <input type="color" id="colorpalette" value="#000000">
                 </div>
-                <div class="slidercontainer">
-                    Pixel Count Slider
-                    <input type="range" min="1" max="128" value="64"
+                <div class="container">
+                    <div id="pixelcount" class="value">Pixel Count: 32px</div>
+                    <input type="range" min="0" max="4" value="2"
                     class="slider" id="PixelCount">
                 </div>
             </div>
