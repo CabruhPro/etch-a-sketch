@@ -89,6 +89,8 @@ button {
 
 #draw {
     background-color: orange;
+    color:white;
+    border-color: white;
 }
 
 #erase {

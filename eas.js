@@ -4,6 +4,7 @@ let color="#000000";
 let drawing=true;
 
 grid=document.querySelector(".grid");
+populateGrid();
 function populateGrid (){
     while (grid.firstChild) {
         grid.removeChild(grid.lastChild);
@@ -60,13 +61,34 @@ colorpicker.addEventListener('input', function (e) {
 });
 
 drawbutton=document.querySelector("#draw");
-drawbutton.addEventListener('click', () => drawing=true);
+drawbutton.addEventListener('click', function () {
+    drawbutton.style.color="#FFFFFF"
+    drawbutton.style.borderColor="#FFFFFF"
+    erasebutton.style.color="#000000"
+    erasebutton.style.borderColor="#000000"
+    drawing=true;
+});
 erasebutton=document.querySelector("#erase");
-erasebutton.addEventListener('click', () => drawing=false);
+erasebutton.addEventListener('click', function () {
+    drawbutton.style.color="#000000"
+    drawbutton.style.borderColor="#000000"
+    erasebutton.style.color="#FFFFFF"
+    erasebutton.style.borderColor="#FFFFFF"
+    drawing=false;
+});
 clearbutton=document.querySelector("#clear");
 clearbutton.addEventListener('click', function () {
     grid.childNodes.forEach(pixel => pixel.style.backgroundColor="#FFFFFF");
 });
-
-//Main execution
-populateGrid();
+clearbutton.addEventListener('mousedown', function () {
+    clearbutton.style.color="#FFFFFF"
+    clearbutton.style.borderColor="#FFFFFF"
+});
+clearbutton.addEventListener('mouseup', function () {
+    clearbutton.style.color="#000000"
+    clearbutton.style.borderColor="#000000"
+});
+clearbutton.addEventListener('mouseleave', function () {
+    clearbutton.style.color="#000000"
+    clearbutton.style.borderColor="#000000"
+});
